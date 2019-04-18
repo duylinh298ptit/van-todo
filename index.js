@@ -1,10 +1,10 @@
-import express from "express";
-import bodyParser from "body-parser";
+const express = require("express");
+const bodyParser = require("body-parser");
 // export để chạy unit test thôi
-export const app = express();
+const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-export let listTodos = [
+let listTodos = [
   {
     id: 1,
     todo: "Hoc bai cu",
@@ -131,3 +131,5 @@ if (process.env.NODE_ENV !== "test") {
     console.log("> Server running");
   });
 }
+
+module.exports = { app, listTodos };

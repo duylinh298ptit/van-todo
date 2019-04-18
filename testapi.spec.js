@@ -1,7 +1,7 @@
-import request from "supertest";
-import { app, listTodos } from "./index";
+const request = require("supertest");
+const { app, listTodos } = require("./index");
 
-describe.skip("/GET", () => {
+describe("/GET", () => {
   test("Lay tat ca danh sach Todo", done => {
     request(app)
       .get("/todos")
