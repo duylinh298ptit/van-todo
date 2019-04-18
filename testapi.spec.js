@@ -1,7 +1,7 @@
 import request from "supertest";
 import { app, listTodos } from "./index";
 
-describe("/GET", () => {
+describe.skip("/GET", () => {
   test("Lay tat ca danh sach Todo", done => {
     request(app)
       .get("/todos")
